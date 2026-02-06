@@ -20,6 +20,8 @@ import ChatContainer from './components/Chat/ChatComponents/ChatContainer/ChatCo
 import Layout from './pages/Layout/Layout';
 import OnlyNotAuthorizedUserRoute from './components/Routes/OnlyNotAuthorizedUserRoute/OnlyNotAuthorizedUserRoute';
 import PrivateRoute from './components/Routes/PrivateRoute/PrivateRoute';
+import HowItWorksPage from './pages/HowItWorks/HowItWorksPage';
+import EventsPage from './pages/Events/EventsPage';
 
 class App extends Component {
   render() {
@@ -37,6 +39,8 @@ class App extends Component {
           pauseOnHover
         />
         <Routes>
+          <Route path="/how-it-works" element={<HowItWorksPage />} />
+          <Route path="/events" element={<EventsPage />} />
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
 

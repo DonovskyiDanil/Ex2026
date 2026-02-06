@@ -13,11 +13,13 @@ import FormTextArea from '../InputComponents/FormTextArea/FormTextArea';
 import TryAgain from '../TryAgain/TryAgain';
 import Schems from '../../utils/validators/validationSchems';
 import OptionalSelects from '../OptionalSelects/OptionalSelects';
+import DomainQuestion from '../DomainQuestion/DomainQuestion';
 
 const variableOptions = {
   [CONSTANTS.NAME_CONTEST]: {
     styleName: '',
     typeOfName: '',
+    domainQuestion: '',
   },
   [CONSTANTS.LOGO_CONTEST]: {
     nameVenture: '',
@@ -144,6 +146,7 @@ class ContestForm extends React.Component {
                   }}
                 />
               </div>
+              <DomainQuestion {...this.props} />
               <OptionalSelects {...this.props} />
               <FieldFileInput
                 name="file"
